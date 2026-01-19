@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/RamCse05/ansible-jenkins-cicd.git'
+                git branch: 'main', url: 'https://github.com/RamCse05/ansible-jenkins-cicd.git'
+
             }
         }
 
