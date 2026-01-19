@@ -1,0 +1,15 @@
+- name: Install nginx
+  yum:
+    name: nginx
+    state: present
+
+- name: Start nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+
+- name: Deploy nginx page
+  template:
+    src: index.html.j2
+    dest: /usr/share/nginx/html/index.html
